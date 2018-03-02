@@ -69,4 +69,11 @@ describe('equals', () => {
     expect(Seq(one).equals(Seq(another))).toBe(true);
   });
   
+  it('Should return true for two different Iterators on equal Collections',  () => {
+    const one = Set.of(1, 2, 3, 4);
+    const another = Set([1, 2, 4, 3]);
+    
+    expect(one.keys().equals(another.keys())).toBe(true);
+  });
+  
 });
